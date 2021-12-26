@@ -68,10 +68,11 @@ public class API {
 				} else {
 					in = new BufferedReader(new InputStreamReader(conn.getErrorStream()));
 				}
-				StringBuilder respone = new StringBuilder(); // ising StringBuilder for the sake of memory and performance
-				while ((inputLine = in.readLine()) != null)
+				StringBuilder respone = new StringBuilder(); // using StringBuilder for the sake of memory and performance
+				while ((inputLine = in.readLine()) != null) {
 					System.out.println(inputLine);
-				respone.append(inputLine + "\n");
+		            respone.append(inputLine + "\n");
+				}
 				in.close();
 				LOGGER.info("Respone Info: " + respone.substring(0, respone.length() - 1).toString());
 				return respone.substring(0, respone.length() - 1).toString();

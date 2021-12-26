@@ -28,7 +28,6 @@ class ValidateNameTest {
 		"@U, false"
 	})
 
-	@Test
 	void test(String name, boolean expected) {
 		boolean isValid = placeOrderController.validateName(name);
 

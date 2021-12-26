@@ -17,7 +17,9 @@ import entity.invoice.Invoice;
 import entity.order.Order;
 import entity.order.OrderMedia;
 import views.screen.popup.PopupScreen;
-
+/**
+ * @author UyenNTT_20184014
+ */
 public class PlaceOrderController extends BaseController{
 	
     /**
@@ -82,7 +84,9 @@ public class PlaceOrderController extends BaseController{
     	
     }
     
-    /*Uyen_NTT184014*/
+    /**
+     * @author UyenNTT
+     */
     public boolean validatePhoneNumber(String phoneNumber) {
     	if(phoneNumber.length() != 10) return false;
     	
@@ -94,29 +98,31 @@ public class PlaceOrderController extends BaseController{
     	return phoneNumber.equals("0123456789");
     }
     
-    /*Uyen_NTT184014*/
+    /**
+     * @author UyenNTT
+     */
     public boolean validateName(String name) {
     	if(name == null) return false;
     	return Pattern.matches("[a-zA-Z\\s]*{1,100}", name);
     }
     
-    /*Uyen_NTT184014*/
+    /**
+     * @author UyenNTT
+     */
     public boolean validateAddress(String address) {
     	if (address == null) return false;
     	
-    	return Pattern.matches("[a-zA-Z\\\\.]*{1,200}", address);
+    	return Pattern.matches("[a-zA-Z\\s.]*{1,200}", address);
     }
     
 
     /**
      * This method calculates the shipping fees of order
+     * @author UyenNTT
      * @param order
      * @return shippingFee
      */
     public int calculateShippingFee(Order order){
-        Random rand = new Random();
-        int fees = (int)( ( (rand.nextFloat()*10)/100 ) * order.getAmount() );
-        LOGGER.info("Order Amount: " + order.getAmount() + " -- Shipping Fees: " + fees);
-        return fees;
+        return new ShippingFeeCalculatorWithAlternativeWeight().calculateShippingFee(order); 
     }
 }

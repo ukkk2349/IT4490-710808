@@ -28,7 +28,6 @@ class ValidatePhoneNumberTest {
 		"1234567890, false"
 	})
 
-	@Test
 	public void test(String phone, boolean expected) {
 		boolean isValid = placeOrderController.validatePhoneNumber(phone);
 		assertEquals(expected, isValid);
