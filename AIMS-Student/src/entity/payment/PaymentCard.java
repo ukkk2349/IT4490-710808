@@ -4,6 +4,6 @@ package entity.payment;
  * @author UyenNTT
  *
  */
-public abstract class Card {
+public abstract class PaymentCard {
 
 }
