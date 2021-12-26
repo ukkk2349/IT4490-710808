@@ -1,6 +1,6 @@
 package entity.payment;
 
-public class DomesticDebitCard {
+public class DomesticDebitCard extends Card{
 	private String issuingBank;
 	private String cardNumber;
 	private String validFromDate;

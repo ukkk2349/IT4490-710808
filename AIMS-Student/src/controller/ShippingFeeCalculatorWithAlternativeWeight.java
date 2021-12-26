@@ -5,6 +5,10 @@ import java.util.logging.Logger;
 
 import entity.order.Order;
 
+/**
+ * @author UyenNTT
+ *
+ */
 public class ShippingFeeCalculatorWithAlternativeWeight implements ShippingFeeCalculator{
 	
 	private static Logger LOGGER = utils.Utils.getLogger(ShippingFeeCalculatorWithAlternativeWeight.class.getName());

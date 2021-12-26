@@ -5,6 +5,10 @@ import common.exception.UnrecognizedException;
 import entity.payment.CreditCard;
 import entity.payment.PaymentTransaction;
 
+/**
+ * @author UyenNTT
+ *
+ */
 public class TemporaryBank implements InterbankInterface {
 
 	@Override
